@@ -232,7 +232,6 @@ section {
     background: #081b29;
     width: 100vw;
     height: 100vh;
-    font-size: large;
     top: 0; left: 0;
     display: flex;
     justify-content: center;
@@ -241,12 +240,13 @@ section {
 }
 .loader {
     color: #00bfff;
-    font-size: 5rem; /* Increased size */
+    font-size: 6rem; /* Increased size */
     border-right: 3px solid #00bfff;
     white-space: nowrap;
     overflow: hidden;
     width: 0;
-    font-family: 'Courier New', monospace;
+    font-family: 'poppins', sans-serif;
+    text-align: center;
     animation: typing 2s steps(6, end) forwards, blink 0.75s step-end infinite;
     margin-bottom: 2.5rem; /* Space below text */
 }
