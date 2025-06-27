@@ -84,7 +84,9 @@ section {
     display: flex;
     align-items: center;
     padding: 0 9%;
-    justify-content: space-between;
+    background: url('/images/bg3.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .home .content {
@@ -221,4 +223,81 @@ section {
 
 .home-sci a:hover::before {
     width: 100%; /* Slide in effect */
+}
+
+/* Loader styles */
+#loader-bg {
+    position: fixed;
+    z-index: 9999;
+    background: #081b29;
+    width: 100vw;
+    height: 100vh;
+    font-size: large;
+    top: 0; left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Stack loader and line vertically */
+}
+.loader {
+    color: #00bfff;
+    font-size: 5rem; /* Increased size */
+    border-right: 3px solid #00bfff;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    font-family: 'Courier New', monospace;
+    animation: typing 2s steps(6, end) forwards, blink 0.75s step-end infinite;
+    margin-bottom: 2.5rem; /* Space below text */
+}
+@keyframes typing {
+    from { width: 0 }
+    to { width: 6ch }
+}
+@keyframes blink {
+    0%, 100% { border-color: transparent }
+    50% { border-color: #00bfff }
+}
+
+/* Loading line (progress bar) */
+.loader-line {
+    width: 180px;
+    height: 6px;
+    background: #0a223a;
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative;
+}
+.loader-line span {
+    display: block;
+    height: 100%;
+    width: 0;
+    background: linear-gradient(90deg, #00bfff 0%, #00abf0 100%);
+    border-radius: 3px;
+    animation: loading-line 2s linear forwards;
+}
+@keyframes loading-line {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+.home-imgHover {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    left: 50%;
+    width: 45px;
+    height: 100px;
+    border-radius: 50%;
+    background: transparent;
+    border:  2px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.home-imgHover:hover {
+    background: yellowgreen;
 }
